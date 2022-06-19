@@ -18,6 +18,13 @@
 		BB9540DF285D74D300EC5D45 /* AlamofireFeatureTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9540DE285D74D300EC5D45 /* AlamofireFeatureTestUITestsLaunchTests.swift */; };
 		BB9540ED285D75BC00EC5D45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB9540EC285D75BC00EC5D45 /* Alamofire */; };
 		BBE11837285E4469005AAEFF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE11836285E4469005AAEFF /* Response.swift */; };
+		BBEDAAA7285ED7B200715574 /* XTypeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAA6285ED7B200715574 /* XTypeAdapter.swift */; };
+		BBEDAAA9285ED7DC00715574 /* AuthenAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAA8285ED7DC00715574 /* AuthenAdapter.swift */; };
+		BBEDAAAC285ED91800715574 /* AppMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAAB285ED91800715574 /* AppMonitor.swift */; };
+		BBEDAAAF285ED96800715574 /* SynchronizedSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAAE285ED96800715574 /* SynchronizedSerial.swift */; };
+		BBEDAAB1285ED97C00715574 /* RefreshTokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAB0285ED97C00715574 /* RefreshTokenInterceptor.swift */; };
+		BBEDAAB4285ED9AA00715574 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAB3285ED9AA00715574 /* AppRoute.swift */; };
+		BBEDAAB6285ED9CE00715574 /* AppNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDAAB5285ED9CE00715574 /* AppNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,13 @@
 		BB9540DC285D74D300EC5D45 /* AlamofireFeatureTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireFeatureTestUITests.swift; sourceTree = "<group>"; };
 		BB9540DE285D74D300EC5D45 /* AlamofireFeatureTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireFeatureTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBE11836285E4469005AAEFF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		BBEDAAA6285ED7B200715574 /* XTypeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTypeAdapter.swift; sourceTree = "<group>"; };
+		BBEDAAA8285ED7DC00715574 /* AuthenAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenAdapter.swift; sourceTree = "<group>"; };
+		BBEDAAAB285ED91800715574 /* AppMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMonitor.swift; sourceTree = "<group>"; };
+		BBEDAAAE285ED96800715574 /* SynchronizedSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizedSerial.swift; sourceTree = "<group>"; };
+		BBEDAAB0285ED97C00715574 /* RefreshTokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenInterceptor.swift; sourceTree = "<group>"; };
+		BBEDAAB3285ED9AA00715574 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		BBEDAAB5285ED9CE00715574 /* AppNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +117,12 @@
 		BB9540BA285D74D200EC5D45 /* AlamofireFeatureTest */ = {
 			isa = PBXGroup;
 			children = (
+				BBEDAAB7285EDA0100715574 /* Model */,
+				BBEDAAAD285ED95E00715574 /* Tools */,
+				BBEDAAA3285ED71D00715574 /* Networking */,
 				BB9540BB285D74D200EC5D45 /* AppDelegate.swift */,
 				BB9540BD285D74D200EC5D45 /* SceneDelegate.swift */,
 				BB9540BF285D74D200EC5D45 /* ViewController.swift */,
-				BBE11836285E4469005AAEFF /* Response.swift */,
 				BB9540C1285D74D200EC5D45 /* Main.storyboard */,
 				BB9540C4285D74D300EC5D45 /* Assets.xcassets */,
 				BB9540C6285D74D300EC5D45 /* LaunchScreen.storyboard */,
@@ -130,6 +146,59 @@
 				BB9540DE285D74D300EC5D45 /* AlamofireFeatureTestUITestsLaunchTests.swift */,
 			);
 			path = AlamofireFeatureTestUITests;
+			sourceTree = "<group>";
+		};
+		BBEDAAA3285ED71D00715574 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDAAB2285ED9A000715574 /* AppRoute */,
+				BBEDAAAA285ED90B00715574 /* EventMonitor */,
+				BBEDAAA5285ED7A000715574 /* Interceptor */,
+				BBEDAAB5285ED9CE00715574 /* AppNetwork.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BBEDAAA5285ED7A000715574 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDAAA6285ED7B200715574 /* XTypeAdapter.swift */,
+				BBEDAAA8285ED7DC00715574 /* AuthenAdapter.swift */,
+				BBEDAAB0285ED97C00715574 /* RefreshTokenInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		BBEDAAAA285ED90B00715574 /* EventMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDAAAB285ED91800715574 /* AppMonitor.swift */,
+			);
+			path = EventMonitor;
+			sourceTree = "<group>";
+		};
+		BBEDAAAD285ED95E00715574 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDAAAE285ED96800715574 /* SynchronizedSerial.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		BBEDAAB2285ED9A000715574 /* AppRoute */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDAAB3285ED9AA00715574 /* AppRoute.swift */,
+			);
+			path = AppRoute;
+			sourceTree = "<group>";
+		};
+		BBEDAAB7285EDA0100715574 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBE11836285E4469005AAEFF /* Response.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,10 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEDAAB6285ED9CE00715574 /* AppNetwork.swift in Sources */,
+				BBEDAAA9285ED7DC00715574 /* AuthenAdapter.swift in Sources */,
 				BBE11837285E4469005AAEFF /* Response.swift in Sources */,
 				BB9540C0285D74D200EC5D45 /* ViewController.swift in Sources */,
+				BBEDAAAF285ED96800715574 /* SynchronizedSerial.swift in Sources */,
 				BB9540BC285D74D200EC5D45 /* AppDelegate.swift in Sources */,
+				BBEDAAB1285ED97C00715574 /* RefreshTokenInterceptor.swift in Sources */,
 				BB9540BE285D74D200EC5D45 /* SceneDelegate.swift in Sources */,
+				BBEDAAA7285ED7B200715574 /* XTypeAdapter.swift in Sources */,
+				BBEDAAAC285ED91800715574 /* AppMonitor.swift in Sources */,
+				BBEDAAB4285ED9AA00715574 /* AppRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
