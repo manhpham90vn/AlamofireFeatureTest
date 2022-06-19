@@ -44,7 +44,7 @@ class AppNetwork {
         session.cancelAllRequests()
     }
     
-    // do not call validate() here
+    // TODO: check if use validate() funtion lead call refresh token 2 time
     func request<T: Decodable>(route: URLRequestConvertible, type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
         session
             .request(route)

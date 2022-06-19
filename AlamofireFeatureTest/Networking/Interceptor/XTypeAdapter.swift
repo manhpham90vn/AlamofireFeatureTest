@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 
-// custom header
 class XTypeAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest

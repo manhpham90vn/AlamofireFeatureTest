@@ -8,8 +8,7 @@
 import Foundation
 import Alamofire
 
-// auto update token
-// todo: add protocol to add token if need
+// TODO: add protocol to check add token if needed example login api not need bearer token
 class AuthenAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest

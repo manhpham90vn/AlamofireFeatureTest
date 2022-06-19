@@ -14,11 +14,11 @@ class RefreshTokenInterceptor: RequestInterceptor {
     private var isRefreshing = false
     private var requestsToRetry: [RequestRetryCompletion] = []
     
-    // auto update token
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         completion(.success(urlRequest))
     }
     
+    // TODO: check some time call refresh token 2 time
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         lock.lock {
             guard let response = request.response, response.statusCode == 401 else {
@@ -49,6 +49,7 @@ class RefreshTokenInterceptor: RequestInterceptor {
         }
     }
     
+    // TODO: use AppNetwork.default but lead can not get callback
     func refreshToken(completion: @escaping (Result<String, Error>) -> Void) {
         AF.request("http://localhost.charlesproxy.com:3000/refreshToken",
                    method: .post,
